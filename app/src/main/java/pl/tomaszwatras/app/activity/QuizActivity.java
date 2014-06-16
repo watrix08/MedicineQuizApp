@@ -89,7 +89,8 @@ public class QuizActivity extends ActionBarActivity {
             questionList = questionsHelper.getQuestions(numberOfQuestionsToFetch);
             totalNumberOfQuestions = questionList.size();
         } else {
-            //TODO: handle other cases
+            //TODO:
+            // handle other cases
         }
 
     }
