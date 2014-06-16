@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- GENERAL -->
+    <string name="app_name">ŚUM Quiz</string>
+    <string name="action_settings">About</string>
+
+    <!-- BUTTONS -->
+    <string name="button_start">Nowy quiz</string>
+    <string name="button_exit">Wyjście</string>
+
+    <string name="first_year">Pierwszy</string>
+    <string name="second_year">Drugi</string>
+    <string name="third_year">Trzeci</string>
+    <string name="fourth_year">Czwarty</string>
+    <string name="fifth_year">Piąty</string>
+    <string name="sixth_year">Szósty</string>
+
+    <!-- LABELS -->
+    <string name="label_select_year">Wybierz rok studiów:</string>
+</resources>

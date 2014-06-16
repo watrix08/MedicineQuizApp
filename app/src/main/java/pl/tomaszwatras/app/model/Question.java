@@ -1,0 +1,119 @@
+package pl.tomaszwatras.app.model;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import pl.tomaszwatras.app.enums.Category;
+
+/**
+ * Created by watrix on 13.06.2014.
+ */
+public class Question {
+
+    private int id;
+    private Category category;
+    private String questionText;
+    private String answer1;
+    private String answer2;
+    private String answer3;
+    private String answer4;
+    private String answer5;
+
+    public Question() {
+    }
+
+    /**
+     *
+     * @param id question id from db
+     * @param questionText question text
+     * @param answer1 correct answer
+     * @param answer2 optional answer#1
+     * @param answer3 optional answer#2
+     * @param answer4 optional answer#3
+     * @param answer5 optional answer#4
+     */
+    public Question(int id, String questionText, String answer1, String answer2, String answer3, String answer4, String answer5) {
+        this.id = id;
+        this.questionText = questionText;
+        this.answer1 = answer1;
+        this.answer2 = answer2;
+        this.answer3 = answer3;
+        this.answer4 = answer4;
+        this.answer5 = answer5;
+    }
+
+    public List<String> getAnswers(){
+        List<String> ret = new ArrayList<String>();
+        ret.add(answer1);
+        ret.add(answer2);
+        ret.add(answer3);
+        ret.add(answer4);
+        ret.add(answer5);
+
+        return ret;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getQuestionText() {
+        return questionText;
+    }
+
+    public void setQuestionText(String questionText) {
+        this.questionText = questionText;
+    }
+
+    public String getAnswer1() {
+        return answer1;
+    }
+
+    public void setAnswer1(String answer1) {
+        this.answer1 = answer1;
+    }
+
+    public String getAnswer2() {
+        return answer2;
+    }
+
+    public void setAnswer2(String answer2) {
+        this.answer2 = answer2;
+    }
+
+    public String getAnswer3() {
+        return answer3;
+    }
+
+    public void setAnswer3(String answer3) {
+        this.answer3 = answer3;
+    }
+
+    public String getAnswer4() {
+        return answer4;
+    }
+
+    public void setAnswer4(String answer4) {
+        this.answer4 = answer4;
+    }
+
+    public String getAnswer5() {
+        return answer5;
+    }
+
+    public void setAnswer5(String answer5) {
+        this.answer5 = answer5;
+    }
+
+    public Category getCategory() {
+        return category;
+    }
+
+    public void setCategory(Category category) {
+        this.category = category;
+    }
+}
