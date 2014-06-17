@@ -10,17 +10,6 @@
     tools:context=".MainActivity"
     android:longClickable="true">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:textSize="@dimen/abc_action_bar_default_height"
-        android:textStyle="bold"
-        android:text="ŚUM \nQUIZ"
-        android:id="@+id/options_number_of_questions_textView"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true" />
-
     <Button
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
@@ -48,6 +37,14 @@
         android:layout_alignParentBottom="true"
         android:layout_alignLeft="@+id/main_new_quiz_button"
         android:layout_alignStart="@+id/main_new_quiz_button" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView2"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/logo"/>
 
 </RelativeLayout>
 
