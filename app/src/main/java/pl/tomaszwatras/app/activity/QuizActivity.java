@@ -32,21 +32,27 @@ import pl.tomaszwatras.app.util.QuestionsHelper;
  */
 public class QuizActivity extends ActionBarActivity {
 
+    //public keys
     public static final String TOTAL_POINTS_KEY = "pl.tomaszwatras.app.activity.QuizActivity.totalPoints";
     public static final String TOTAL_QUESTIONS_KEY = "pl.tomaszwatras.app.activity.QuizActivity.totalQuestions";
 
+    //data helper
     private QuestionsHelper questionsHelper;
 
+    // variables
+    private List<Question> questionList;
     private int currentQuestion = 0;
     private int totalPoints = 0;
     private int totalNumberOfQuestions;
     private boolean buttonsBlocked = false;
+
+    //components
     private TextView questionView;
     private TextView idTextView;
     private List<QuizButton> buttonList;
     private QuizButton answer5Button;
-    private List<Question> questionList;
     private Button nextQuestionButton;
+    private Toast toast;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -179,11 +185,13 @@ public class QuizActivity extends ActionBarActivity {
         if (button.isCorrectAnswer()) {
             totalPoints++;
             button.setBackgroundColor(Color.rgb(120, 171, 70));
-            Toast.makeText(this, "Jupi!", Toast.LENGTH_SHORT).show();
+            toast = Toast.makeText(this, "Jupi!", Toast.LENGTH_SHORT);
+            toast.show();
         } else {
             button.setBackgroundColor(Color.rgb(220, 20, 60));
             findCorrectAnswer().setBackgroundColor(Color.rgb(120, 171, 70));
-            Toast.makeText(this, "Dałeś dupy", Toast.LENGTH_SHORT).show();
+            toast = Toast.makeText(this, "Dałeś dupy", Toast.LENGTH_SHORT);
+            toast.show();
         }
     }
 
@@ -237,6 +245,7 @@ public class QuizActivity extends ActionBarActivity {
             @Override
             public void onClick(View view) {
                 nextQuestion();
+                toast.cancel();
             }
         });
     }

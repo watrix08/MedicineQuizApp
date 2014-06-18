@@ -30,11 +30,6 @@ public class QuestionsHelper {
             throw new Error("Unable to create database");
         }
 
-        try {
-            this.databaseHelper.openDataBase();
-        } catch (SQLException sqlex) {
-            throw sqlex;
-        }
     }
 
     public void open() throws SQLException {
