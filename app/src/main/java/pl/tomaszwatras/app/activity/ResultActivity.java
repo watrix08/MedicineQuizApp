@@ -39,6 +39,30 @@ public class ResultActivity extends ActionBarActivity {
                 + "\n" + new DecimalFormat("#.##").format(percentResult) + "%");
     }
 
+    private void setResultComment(double percentResult){
+        if(percentResult < 10){
+            //TODO add comment
+        } else if (percentResult < 20 ){
+            //TODO add comment
+        } else if (percentResult < 30) {
+            //TODO add comment
+        } else if (percentResult < 40) {
+            //TODO add comment
+        } else if (percentResult < 50) {
+            //TODO add comment
+        } else if (percentResult < 60) {
+            //TODO add comment
+        } else  if (percentResult < 70) {
+            //TODO add comment
+        } else  if (percentResult < 80 ){
+            //TODO add comment
+        } else if (percentResult <90) {
+            //TODO add comment
+        } else {
+
+        }
+    }
+
     /**
      * Gets stored in context values
      */

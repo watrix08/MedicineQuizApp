@@ -22,7 +22,6 @@ import java.util.List;
 import java.util.Random;
 
 import pl.tomaszwatras.app.R;
-import pl.tomaszwatras.app.enums.Category;
 import pl.tomaszwatras.app.model.Question;
 import pl.tomaszwatras.app.model.QuizButton;
 import pl.tomaszwatras.app.util.QuestionsHelper;
@@ -91,13 +90,8 @@ public class QuizActivity extends ActionBarActivity {
             category = extras.getString(SelectCategoryActivity.CATEGORY_KEY);
         }
 
-        if (Category.MICROBIOLOGY.toString().equals(category)) {
-            questionList = questionsHelper.getQuestions(numberOfQuestionsToFetch);
-            totalNumberOfQuestions = questionList.size();
-        } else {
-            //TODO:
-            // handle other cases
-        }
+        questionList = questionsHelper.getQuestions(numberOfQuestionsToFetch, category);
+        totalNumberOfQuestions = questionList.size();
 
     }
 

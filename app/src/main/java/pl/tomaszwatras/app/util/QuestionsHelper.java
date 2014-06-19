@@ -23,13 +23,6 @@ public class QuestionsHelper {
 
     public QuestionsHelper(Context context) {
         this.databaseHelper = new DatabaseHelper(context);
-
-        try {
-            this.databaseHelper.createDataBase();
-        } catch (IOException ioe) {
-            throw new Error("Unable to create database");
-        }
-
     }
 
     public void open() throws SQLException {
@@ -50,9 +43,10 @@ public class QuestionsHelper {
         return executeQuery("SELECT  * FROM sumQuiz");
     }
 
-    public List<Question> getQuestions(int numberOfQuestions) {
+    public List<Question> getQuestions(int numberOfQuestions, String category) {
 
-        return executeQuery("SELECT  * FROM sumQuiz ORDER BY RANDOM() LIMIT " + String.valueOf(numberOfQuestions));
+        return executeQuery("SELECT  * FROM sumQuiz WHERE category = '" + category +
+                "' ORDER BY RANDOM() LIMIT " + String.valueOf(numberOfQuestions));
     }
 
     private List<Question> executeQuery(String queryString) {
