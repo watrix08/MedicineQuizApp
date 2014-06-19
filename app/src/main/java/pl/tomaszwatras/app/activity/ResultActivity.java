@@ -13,6 +13,8 @@ import java.text.DecimalFormat;
 import pl.tomaszwatras.app.R;
 
 /**
+ * Responsible for displaying result activity
+ *
  * Created by watrix on 14.06.2014.
  */
 public class ResultActivity extends ActionBarActivity {
@@ -39,27 +41,32 @@ public class ResultActivity extends ActionBarActivity {
                 + "\n" + new DecimalFormat("#.##").format(percentResult) + "%");
     }
 
-    private void setResultComment(double percentResult){
-        if(percentResult < 10){
-            //TODO add comment
-        } else if (percentResult < 20 ){
-            //TODO add comment
-        } else if (percentResult < 30) {
-            //TODO add comment
-        } else if (percentResult < 40) {
-            //TODO add comment
-        } else if (percentResult < 50) {
-            //TODO add comment
-        } else if (percentResult < 60) {
-            //TODO add comment
-        } else  if (percentResult < 70) {
-            //TODO add comment
-        } else  if (percentResult < 80 ){
-            //TODO add comment
-        } else if (percentResult <90) {
-            //TODO add comment
-        } else {
+    private void setResultComment(double percentResult) {
 
+        if (percentResult < 50) {
+            if (percentResult < 10) {
+                //TODO add comment
+            } else if (percentResult < 20) {
+                //TODO add comment
+            } else if (percentResult < 30) {
+                //TODO add comment
+            } else if (percentResult < 40) {
+                //TODO add comment
+            } else {
+
+            }
+        } else {
+            if (percentResult < 60) {
+                //TODO add comment
+            } else if (percentResult < 70) {
+                //TODO add comment
+            } else if (percentResult < 80) {
+                //TODO add comment
+            } else if (percentResult < 90) {
+                //TODO add comment
+            } else {
+
+            }
         }
     }
 
